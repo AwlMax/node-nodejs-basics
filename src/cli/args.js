@@ -1,5 +1,11 @@
+import { argv } from 'node:process'
+
 const parseArgs = () => {
-    // Write your code here 
+    argv.forEach((arg, index) => {
+        if (arg.startsWith('--')) {
+            console.log(`${arg.substring(2)}=${argv[index]}`);
+        }
+    });
 };
 
 parseArgs();

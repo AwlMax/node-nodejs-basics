@@ -1,5 +1,19 @@
+import fs from 'fs'
+
+const dir = '../fs/files/fresh.txt'
+
 const create = async () => {
-    // Write your code here 
+   
+    if (!fs.existsSync(dir)) {
+
+        fs.writeFile('../fs/files/fresh.txt', 'I am fresh and young', function(err) {});
+    
+    } else {
+        console.log('FS operation failed');
+    }
 };
 
 await create();
+
+
+///home/fox/Documents/node-nodejs-basics/src/fs/files
